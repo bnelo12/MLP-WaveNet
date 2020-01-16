@@ -1,5 +1,16 @@
-# MLP Cluster Tutorial Branch
-A short code repo that showcases a potential framework for carrying out experiments on the MLP Cluster.
+# ClaireNet
+
+## Enviornment Setup
+ClaireNet uses a Conda to manage its enviorment. To setup first have Conda installed and then run:
+
+```conda env create -f environment.yml```
+
+This will install all the required dependencies and ensure that the right version of Python is selected.
+
+To activate the enviorment run:
+
+```conda activate mlp_proj```
+
 
 ## Introduction
 
