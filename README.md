@@ -1,7 +1,7 @@
 # ClaireNet
 
-## Enviornment Setup
-ClaireNet uses a Conda to manage its enviorment. To setup first have Conda installed and then run:
+## Environment Setup
+ClaireNet uses a Conda to manage its environment. To setup, first have Conda installed and then run:
 
 ```conda env create -f environment.yml```
 
