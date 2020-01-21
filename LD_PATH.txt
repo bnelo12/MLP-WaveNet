@@ -1,0 +1,1 @@
+LD_LIBRARY_PATH=/opt/cuDNN-7.6.0.64_10.1/lib64:/opt/cuda-10.1.168_418_67/lib64:/opt/cuDNN-7.6.0.64_10.1/lib64:/opt/cuda-10.1.168_418_67/lib64:/opt/cuDNN-7.0/lib64:/opt/cuda-10.1.168_418_67/lib64:/opt/cuDNN-7.0//lib64:/opt/cuda-10.1.168_418_67//lib64:

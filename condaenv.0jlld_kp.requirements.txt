@@ -1,0 +1,5 @@
+git+https://github.com/bnelo12/pytube.git#pytube
+pydub
+google-cloud-storage
+tensorflow
+librosa

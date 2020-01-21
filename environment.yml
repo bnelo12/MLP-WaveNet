@@ -3,8 +3,10 @@ channels:
   - defaults
 dependencies:
   - pip=19.3.1  
-  - python=3.7.6  
+  - python=3.7.6
   - pip:
     - pydub
     - git+https://github.com/bnelo12/pytube.git#pytube
     - google-cloud-storage
+    - tensorflow
+    - librosa
