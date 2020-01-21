@@ -9,6 +9,7 @@ from pydub.utils import make_chunks
 from google.cloud import storage
 
 CHUNK_LENGTH = 30000
+START_AT = 1
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
     """Uploads a file to the bucket."""
@@ -36,6 +37,8 @@ print("Download Complete.")
 print("Downloading Videos")
 
 for i, video_url in enumerate(playlist.video_urls):
+    if i < START_AT - 1:
+        continue
     print(f"Downloading {i+1}/{len(playlist.video_urls)}...")
     video = YouTube(video_url)
     stream = video.streams.filter(only_audio=True).all()
