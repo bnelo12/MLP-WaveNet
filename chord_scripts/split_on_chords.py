@@ -29,7 +29,7 @@ for file in os.listdir(directory):
         labels.append(label_val)
 
         # make chord directory if it does not exist
-        os.makedirs(label_val, exist_ok=True)
+        os.makedirs("split/" + label_val, exist_ok=True)
 
     # split clip on
     clip_number = os.path.splitext(filename)[0]
@@ -40,4 +40,4 @@ for file in os.listdir(directory):
     for i in range(len(labels)):
         chord_segment = audio_segment[times[i] : times[i+1]]
 
-        chord_segment.export("{0}/{1}_{2}.wav".format(labels[i], clip_number, i), format="wav")
+        chord_segment.export("split/{0}/{1}_{2}.wav".format(labels[i], clip_number, i), format="wav")
