@@ -1,3 +1,3 @@
 [submodule "wavenet_vocoder"]
 	path = wavenet_vocoder
-	url = git@github.com:r9y9/wavenet_vocoder.git
+	url = git@github.com:bnelo12/wavenet_vocoder.git
