@@ -32,15 +32,9 @@ export TMP=/disk/scratch/${STUDENT_ID}/
 mkdir -p ${TMP}/datasets/
 export DATASET_DIR=${TMP}/datasets/
 
-mkdir ${DATASET_DIR}/dev
-mkdir ${DATASET_DIR}/eval
-mkdir ${DATASET_DIR}/train_no_dev
-
-gsutil -m rsync gs://songs_by_chord/dev_preprocessed ${DATASET_DIR}/dev
-gsutil -m rsync gs://songs_by_chord/eval_preprocessed ${DATASET_DIR}/eval
-gsutil -m rsync gs://songs_by_chord/preprocesse ${DATASET_DIR}/train_no_dev
-
-source /home/${STUDENT_ID}/miniconda3/bin/activate mlp_proj
+cp -r ${PROJECT_PATH}/data/dev  ${DATASET_DIR}
+cp -r ${PROJECT_PATH}/data/train_no_dev  ${DATASET_DIR}
+cp -r ${PROJECT_PATH}/data/eval ${DATASET_DIR}
 
 cd wavenet_vocoder
 
