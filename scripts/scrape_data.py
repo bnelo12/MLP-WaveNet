@@ -31,17 +31,21 @@ chunk_counter = 1
 song_counter = 1
 
 print("Downloading Playlist URLS...")
-playlist = Playlist('https://www.youtube.com/playlist?list=PLFgQy1YgpScjv-y3fjP5Qo3ZwB3CGPBNi')
+playlist = Playlist('https://www.youtube.com/playlist?list=PLFgQy1YgpScjDlIAiu1X-FsZz9bRvC29n')
 playlist.populate_video_urls()
 print("Download Complete.")
 print("Downloading Videos")
+
+print(playlist.video_urls)
 
 for i, video_url in enumerate(playlist.video_urls):
     if i < START_AT - 1:
         continue
     print(f"Downloading {i+1}/{len(playlist.video_urls)}...")
     video = YouTube(video_url)
+    print(video)
     stream = video.streams.filter(only_audio=True).all()
+    print(stream[0])
     stream[0].download("./", filename='temp')
     print("Download complete.")
 
@@ -52,7 +56,5 @@ for i, video_url in enumerate(playlist.video_urls):
     for chunk in list(chunks)[:-1]:
         chunk_name = f"{chunk_counter}.wav"
         print(f"exporting  {chunk_name}")
-        chunk.export(chunk_name, format="wav")
-        upload_blob('ml_proj', chunk_name, chunk_name)
-        os.remove(chunk_name)
+        chunk.export('../data/' + chunk_name, format="wav")
         chunk_counter += 1
