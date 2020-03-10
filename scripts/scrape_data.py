@@ -31,7 +31,7 @@ chunk_counter = 1
 song_counter = 1
 
 print("Downloading Playlist URLS...")
-playlist = Playlist('https://www.youtube.com/playlist?list=PLFgQy1YgpScjDlIAiu1X-FsZz9bRvC29n')
+playlist = Playlist('https://www.youtube.com/playlist?list=PLBLYNxXZgsSOrrEOvajd9JdpJELCIo7R2')
 playlist.populate_video_urls()
 print("Download Complete.")
 print("Downloading Videos")

@@ -1,0 +1,16 @@
+1-wave.npy|1-feats.npy|233|dummy
+10-wave.npy|10-feats.npy|234|dummy
+11-wave.npy|11-feats.npy|234|dummy
+12-wave.npy|12-feats.npy|234|dummy
+13-wave.npy|13-feats.npy|234|dummy
+14-wave.npy|14-feats.npy|234|dummy
+15-wave.npy|15-feats.npy|233|dummy
+16-wave.npy|16-feats.npy|234|dummy
+2-wave.npy|2-feats.npy|234|dummy
+3-wave.npy|3-feats.npy|234|dummy
+4-wave.npy|4-feats.npy|234|dummy
+5-wave.npy|5-feats.npy|234|dummy
+6-wave.npy|6-feats.npy|234|dummy
+7-wave.npy|7-feats.npy|234|dummy
+8-wave.npy|8-feats.npy|233|dummy
+9-wave.npy|9-feats.npy|234|dummy
