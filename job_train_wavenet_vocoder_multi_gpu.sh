@@ -32,12 +32,11 @@ export TMP=/disk/scratch/${STUDENT_ID}/
 mkdir -p ${TMP}/datasets/
 export DATASET_DIR=${TMP}/datasets/
 
+cp -r ${PROJECT_PATH}/data/dev  ${DATASET_DIR}
+cp -r ${PROJECT_PATH}/data/train_no_dev  ${DATASET_DIR}
+cp -r ${PROJECT_PATH}/data/eval ${DATASET_DIR}
 
-source /home/${STUDENT_ID}/miniconda3/bin/activate mlp_proj
+cd wavenet_vocoder
 
-python copy_data.py
-
-cd wavenet
-
-python train.py --data_dir $DATASET_DIR --num_steps 150000 --silence_threshold 0 --max_checkpoints 300 --checkpoint_every 300
+python train.py --dump-root $DATASET_DIR
 
